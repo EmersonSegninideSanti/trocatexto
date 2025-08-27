@@ -16,11 +16,11 @@ São duas classes de tipo input: substring-input e text-input. Cada classe tem d
  
 - Seus containeres imediatos
  
-São duas classes de div: substring-container e text-container.
+São duas classes de div: substring-input-container e text-input-container.
 
 - Container geral
 
-Sendo a página com pouco conteúdo, podemos encerrá-lo todo em um div. Nele dispomos o logo, os espaços para propagandas e aqueles dois containeres.
+Sendo a página com pouco conteúdo, podemos encerrá-lo todo em um div. Nele dispomos aqueles dois containeres e, mais tarde, os espaços para o logo e para a propaganda.
 
 ## Função principal JS
 
