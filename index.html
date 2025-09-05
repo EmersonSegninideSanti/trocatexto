@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,23 +9,23 @@
     <title>Troca-Texto</title>
 </head>
 
-<body class="positioning">
-    <header class="logo">
+<body class="body-itens-position">
+    <header class="header-logo">
         <img src="img/logo_1.png" alt="Logo XY do site" height="120px" width="120px">
     </header>
-    <div class="text-especification-area">
-        <label class="label-sequence-to-remove">Sequencia que será REMOVIDA:</label>
-        <input type="text" id="to-remove-text" class="input-sequence-to-remove" placeholder="Exemplo: '2&#10099;'" spellcheck="false">
-        <label class="label-sequence-to-remove">Sequencia para ADICIONAR no lugar:</label>
-        <input type="text" id="to-add-text" class="input-sequence-to-remove" placeholder="Exemplo: '2-'" spellcheck="false">
+    <div class="sequence-to-change-area">
+        <label for="to-remove-text" class="label-sequence-to-change">Sequencia que será REMOVIDA:</label>
+        <input type="text" id="to-remove-text" class="input-sequence-to-change" placeholder="Exemplo: '2&#10099;'" spellcheck="false">
+        <label for="to-add-text" class="label-sequence-to-change">Sequencia para ADICIONAR no lugar:</label>
+        <input type="text" id="to-add-text" class="input-sequence-to-change" placeholder="Exemplo: '2-'" spellcheck="false">
     </div>
-    <div class="text-modification-area">
-        <div class="divs-area">
-            <div class="text-area">
+    <div class="text-to-change-area">
+        <div class="ttc-divs-area">
+            <div class="text-div">
                 <h2>Texto Original</h2>
                 <textarea id="original-text" class="text-input" role="textbox" contenteditable="true" spellcheck="false" placeholder="Insira aqui o texto que será alterado..."></textarea>
             </div>
-            <div class="text-area">
+            <div class="text-div">
                 <h2>Texto Alterado</h2>
                 <textarea id="new-text" class="text-input" role="textbox" contenteditable="false" placeholder="Esperando texto para alterar..."></textarea>
             </div>

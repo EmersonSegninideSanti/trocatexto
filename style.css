@@ -3,26 +3,40 @@
     justify-content: center;
     align-items: center;
 }
-
-/*---------------- Git Remote ?----------------*/
-
-/*BUG: Agora com TEXTAREA, não scrola para baixo a tela e sim ele criar um Overflow...*/
-
-.positioning {
-    /* display: grid;
-    grid-template-rows: 15vh 25vh 50vh 10vh; */
+.body-itens-position {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
+/*------------------------------------------------------------
+    Header
+------------------------------------------------------------*/
+.header-logo {
+    /* background-color: rgb(255, 255, 255); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
 
-
-.label-sequence-to-remove {
+/*------------------------------------------------------------
+    Area da Sequencia
+------------------------------------------------------------*/
+.sequence-to-change-area {
+    /* background-color: rgb(255, 255, 255); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+.label-sequence-to-change {
     background-color: white;
     margin-top: 5px;
     font-size: 20px;
 }
-.input-sequence-to-remove {
+.input-sequence-to-change {
     background-color: rgb(233, 251, 255);
     border: 2px solid rgb(21, 185, 163);
     border-radius: 10px;
@@ -34,41 +48,24 @@
     font-size: 18px;
     font-family: Arial, "Times New Roman", Times, serif;
 }
-.input-sequence-to-remove::placeholder {
+.input-sequence-to-change::placeholder {
     font-style: italic;
-    /* pointer-events: none; */
 }
 
-
-
-
-.logo {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 15vh;
-}
-.text-especification-area {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 20vh;
-}
-.text-modification-area {
-    background-color: rgb(255, 255, 255);
-    min-height: 65vh;
+/*------------------------------------------------------------
+    Area do Texto
+------------------------------------------------------------*/
+.text-to-change-area {
+    /* background-color: rgb(255, 255, 255); */
     height: auto;
     padding-bottom: 10vh;
 }
-.divs-area {
+.ttc-divs-area {
     display: flex;
     flex-direction: row;
     justify-content: center;
     column-gap: 30px;
-    height: 100%;
+    height: auto;
     width: 100%;
     box-sizing: border-box;
     padding-top: 0px;
@@ -76,17 +73,17 @@
     padding-left: 60px;
     padding-right: 60px;
 }
-.text-area {
+.text-div {
     display: flex;
     flex-direction: column;
-    min-height: 51vh;
+    min-height: 52vh;
     height: auto;
     width: 45vw;
     padding: 0px;
 }
 .text-input {
     background-color: rgb(203, 230, 222);
-    min-height: 100%;
+    min-height: 98%;
     height: auto;
     width: 100%;
     border: 4px solid rgb(18, 165, 104);
@@ -98,18 +95,19 @@
     padding-right: 15px;
     padding-bottom: 15px;
     font-family: Arial, "Times New Roman", Times, serif;
-    white-space: pre-wrap;     /* mantém quebras e permite quebrar linha */
-    overflow-wrap: anywhere;   /* quebra palavras longas mesmo sem espaço */
-    overflow-y: visible;
-    word-break: break-word;    /* compatibilidade extra */
+    white-space: pre-wrap;     /* permite quebrar linha */
+    overflow-wrap: anywhere;
+    /* overflow-y: hidden; */
+    resize: none;
+    word-break: break-word;
 }
 .text-input::placeholder {
     color: rgb(82, 82, 82);
     font-style: italic;
     font-weight: bold;
-    /* pointer-events: none; */
 }
 
+/* Caso use DIV e não TEXTAREA, para ter um Placeholder*/
 /* .text-input:empty::before {
     color: rgb(53, 53, 53);
     font-style: italic;
@@ -123,7 +121,6 @@
     content: "Esperando texto para alterar...";
 } 
 */
-
 h2 {
     padding: 0px;
     padding-bottom: 5px;
@@ -131,10 +128,9 @@ h2 {
     font-size: 25px;
 }
 
-
-
-
-
+/*------------------------------------------------------------
+    Footer
+------------------------------------------------------------*/
 .footer-ads {
     background-image: url(img/Footer.png);
     background-repeat: no-repeat;
