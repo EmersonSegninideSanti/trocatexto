@@ -1,0 +1,144 @@
+body {
+    width: 100vw;
+}
+.centralize-my-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body-itens-position {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/*------------------------------------------------------------
+    Header
+------------------------------------------------------------*/
+.header-logo {
+    /* background-color: rgb(255, 255, 255); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+/*------------------------------------------------------------
+    Area da Sequencia
+------------------------------------------------------------*/
+.substring-input-container {
+    /* background-color: rgb(255, 255, 255); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+.substring-label {
+    background-color: white;
+    margin-top: 5px;
+    font-size: 20px;
+}
+.substring-input {
+    background-color: rgb(233, 251, 255);
+    border: 2px solid rgb(21, 185, 163);
+    border-radius: 10px;
+    height: 35px;
+    width: 80%;
+    max-width: 400px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    font-family: Arial, "Times New Roman", Times, serif;
+}
+.substring-input::placeholder {
+    font-style: italic;
+}
+/*------------------------------------------------------------
+    Area do Texto
+------------------------------------------------------------*/
+/* .text-to-change-area {
+    / background-color: rgb(255, 255, 255); /
+    height: auto;
+    padding-bottom: 10vh;
+} */
+.text-input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 30px;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 120px;
+    /* padding-left: 60px;
+    padding-right: 60px; */
+}
+.text-div {
+    display: flex;
+    flex-direction: column;
+    /* min-height: 52vh; */
+    height: auto;
+    width: auto;
+    padding: 0px;
+}
+.text-input {
+    background-color: rgb(203, 230, 222);
+    /* min-height: 98%;
+    height: auto; */
+    height: 2000px;
+    width: 45vw;
+    border: 4px solid rgb(18, 165, 104);
+    border-radius: 20px;
+    border-bottom: 0px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    font-family: Arial, "Times New Roman", Times, serif;
+    white-space: pre-wrap;     /* permite quebrar linha */
+    overflow-wrap: anywhere;
+    /* overflow-y: hidden; */
+    resize: none;
+    word-break: break-word;
+}
+.text-input::placeholder {
+    color: rgb(82, 82, 82);
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Caso use DIV e não TEXTAREA, para ter um Placeholder*/
+/* .text-input:empty::before {
+    color: rgb(53, 53, 53);
+    font-style: italic;
+    font-weight: bold;
+    pointer-events: none;
+}
+#original-text:empty::before {
+    content: "Insira aqui o texto que será alterado...";
+}
+#new-text:empty::before {
+    content: "Esperando texto para alterar...";
+} 
+*/
+h2 {
+    padding: 0px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 25px;
+}
+/*------------------------------------------------------------
+    Footer
+------------------------------------------------------------*/
+.footer-ads {
+    background-image: url(img/Footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 10vh;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="reset2.css">
+    <script src="script.js"></script>
+    <title>Troca-Texto</title>
+</head>
+<body class="body-itens-position">
+    <header class="header-logo">
+        <img src="img/logo_1.png" alt="Logo XY do site" height="120px" width="120px">
+    </header>
+    <div class="substring-input-container">
+        <label for="original-substring" class="substring-label">Sequencia que será REMOVIDA:</label>
+        <input type="text" id="original-substring" class="substring-input" placeholder="" spellcheck="false">
+        <label for="new-substring" class="substring-label">Sequencia para ADICIONAR no lugar:</label>
+        <input type="text" id="new-substring" class="substring-input" placeholder="" spellcheck="false">
+    </div>
+    <!-- <div class="text-to-change-area"> -->
+        <div class="text-input-container">
+            <div class="text-div">
+                <h2>Texto Original</h2>
+                <textarea id="original-text" class="text-input" role="textbox" contenteditable="true" spellcheck="false" placeholder="Insira aqui o texto que será alterado..."></textarea>
+            </div>
+            <div class="text-div">
+                <h2>Texto Alterado</h2>
+                <textarea id="new-text" class="text-input" role="textbox" contenteditable="false" placeholder="Esperando texto para alterar..."></textarea>
+            </div>
+        </div>
+    <!-- </div> -->
+    <footer class="footer-ads">Área de Anúncios do Google</footer>
+</body>
+</html>
