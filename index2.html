@@ -8,9 +8,9 @@
     <script src="script.js"></script>
     <title>Troca-Texto</title>
 </head>
-<body class="body-itens-position">
-    <header class="header-logo">
-        <img src="img/logo_1.png" alt="Logo XY do site" height="120px" width="120px">
+<body>
+    <header class="header-div">
+        <h1 class="site-name">www.troca-strings.com.br</h1>
     </header>
     <div class="substring-input-container">
         <label for="original-substring" class="substring-label">Sequencia que será REMOVIDA:</label>
@@ -18,18 +18,16 @@
         <label for="new-substring" class="substring-label">Sequencia para ADICIONAR no lugar:</label>
         <input type="text" id="new-substring" class="substring-input" placeholder="" spellcheck="false">
     </div>
-    <!-- <div class="text-to-change-area"> -->
-        <div class="text-input-container">
-            <div class="text-div">
-                <h2>Texto Original</h2>
-                <textarea id="original-text" class="text-input" role="textbox" contenteditable="true" spellcheck="false" placeholder="Insira aqui o texto que será alterado..."></textarea>
-            </div>
-            <div class="text-div">
-                <h2>Texto Alterado</h2>
-                <textarea id="new-text" class="text-input" role="textbox" contenteditable="false" placeholder="Esperando texto para alterar..."></textarea>
-            </div>
+    <div class="text-input-container">
+        <div class="text-div">
+            <h2>Texto Original</h2>
+            <textarea id="original-text" class="text-input" role="textbox" contenteditable="true" spellcheck="false" placeholder="Insira aqui o texto que será alterado..."></textarea>
         </div>
-    <!-- </div> -->
+        <div class="text-div">
+            <h2>Texto Alterado</h2>
+            <textarea id="new-text" class="text-input" role="textbox" contenteditable="false" placeholder="Esperando texto para alterar..."></textarea>
+        </div>
+    </div>
     <footer class="footer-ads">Área de Anúncios do Google</footer>
 </body>
 </html>
