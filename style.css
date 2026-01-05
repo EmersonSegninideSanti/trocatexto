@@ -1,103 +1,111 @@
+/* Os dois locais com a função clamp() foram comentados,
+pois vi ele com o Copiloto, mas não entendi como funciona*/
+
+body {
+    background: linear-gradient(90deg, white, #f5f5f5, white, #f5f5f5, white);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+b, strong {
+    font-weight: bold;
+}
+i, em {
+    font-style: italic;
+}
+
 .centralize-my-content {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.body-itens-position {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 /*------------------------------------------------------------
     Header
 ------------------------------------------------------------*/
-.header-logo {
-    /* background-color: rgb(255, 255, 255); */
+.header-div {
+    background: linear-gradient(45deg, white, #baf0e9, #93f1e5, #109684);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15vh;
+    height: 20vh;
+    border-radius: 10rem 0rem 10rem 0rem;
+}
+.site-name {
+    font-size: 3.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 
 /*------------------------------------------------------------
-    Area da Sequencia
+    Area das Sequencias
 ------------------------------------------------------------*/
-.sequence-to-change-area {
-    /* background-color: rgb(255, 255, 255); */
+.substring-input-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 20vh;
+    margin-top: 0.25rem;
+    margin-bottom: 1.5rem;
 }
-.label-sequence-to-change {
-    background-color: white;
-    margin-top: 5px;
-    font-size: 20px;
+.substring-label {
+    margin-top: 0.25rem;
+    font-size: 1.25rem;
 }
-.input-sequence-to-change {
-    background-color: rgb(233, 251, 255);
-    border: 2px solid rgb(21, 185, 163);
+.substring-input {
+    background-color: #e9fbff;
+    border: 2px solid #15b9a3;
     border-radius: 10px;
-    height: 35px;
-    width: 400px;
+    height: 2.5rem;
+    width: 50%;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 18px;
+    font-size: 1.25rem;
+    color: #750d0d;
     font-family: Arial, "Times New Roman", Times, serif;
 }
-.input-sequence-to-change::placeholder {
+.substring-input::placeholder {
     font-style: italic;
 }
-
 /*------------------------------------------------------------
     Area do Texto
 ------------------------------------------------------------*/
-.text-to-change-area {
-    /* background-color: rgb(255, 255, 255); */
-    height: auto;
-    padding-bottom: 10vh;
-}
-.ttc-divs-area {
-    display: flex;
-    flex-direction: row;
+
+.text-input-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
-    column-gap: 30px;
+    column-gap: 5%;
     height: auto;
     width: 100%;
     box-sizing: border-box;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-top: 1rem;
+    padding-bottom: 6rem;
 }
 .text-div {
     display: flex;
     flex-direction: column;
-    min-height: 52vh;
     height: auto;
-    width: 45vw;
-    padding: 0px;
+    width: auto;
+    padding: 0;
 }
 .text-input {
-    background-color: rgb(203, 230, 222);
-    min-height: 98%;
-    height: auto;
-    width: 100%;
-    border: 4px solid rgb(18, 165, 104);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom: 0px;
+    background-color: #e9fbff;
+    min-height: 20rem;
+    width: auto;
+    border: 2px solid #15b9a3;
+    border-radius: 20px;
     padding-top: 15px;
     padding-left: 20px;
     padding-right: 15px;
     padding-bottom: 15px;
-    font-family: Arial, "Times New Roman", Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     white-space: pre-wrap;     /* permite quebrar linha */
     overflow-wrap: anywhere;
-    /* overflow-y: hidden; */
     resize: none;
     word-break: break-word;
 }
@@ -106,38 +114,81 @@
     font-style: italic;
     font-weight: bold;
 }
-
-/* Caso use DIV e não TEXTAREA, para ter um Placeholder*/
-/* .text-input:empty::before {
-    color: rgb(53, 53, 53);
-    font-style: italic;
-    font-weight: bold;
-    pointer-events: none;
-}
-#original-text:empty::before {
-    content: "Insira aqui o texto que será alterado...";
-}
-#new-text:empty::before {
-    content: "Esperando texto para alterar...";
-} 
-*/
-h2 {
-    padding: 0px;
-    padding-bottom: 5px;
+.text-h {
+    background: linear-gradient(45deg, white, white,  white, #baf0e9, #93f1e5, #3fdbc6,  white, white,  white);
+    padding: 0;
+    padding-bottom: 0.25rem;
     text-align: center;
-    font-size: 25px;
+    font-size: 2rem;
 }
 
 /*------------------------------------------------------------
     Footer
 ------------------------------------------------------------*/
 .footer-ads {
-    background-image: url(img/Footer.png);
+    /* background-image: url(img/Footer.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background: linear-gradient(90deg, #139da7, #15bba5, #16c9b1, #6dd4c7, #71d189);
     height: 10vh;
     position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+    .header-div {
+        height: 15vh;
+    }
+    .site-name {
+        font-size: 1.9rem;
+        /* font-size: clamp(1.9rem, 1vw, 2rem); */
+        /* background-color: green; */
+        white-space: nowrap; /* Para não quebrar em telas pequenas*/
+    }
+    .substring-input-container {
+        margin-top: 1.75rem;
+    }
+    .substring-input {
+        width: 75%;
+    }
+    .text-input-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .text-div {
+        height: 15rem;
+    }
+    .text-input {
+        min-height: 2rem;
+        height: 80%;
+    }
+}
+@media screen and (min-width: 801px) and (max-width: 1020px) {
+    .site-name {
+        font-size: 2rem;
+        /* background-color: red; */
+    }
+}
+@media screen and (min-width: 1021px) and (max-width: 1500px) {
+}
+@media screen and (min-width: 1500px) {
+    .text-input {
+        min-height: 30rem;
+    }
+    .site-name {
+        font-size: 4rem;
+        /* background-color: blue; */
+    }
+    .footer-ads, .text-div, .substring-label, .substring-input {
+        font-size: 1.25rem;
+        /* font-size: clamp(1rem, 1vw, 3rem); */
+    }
+    .substring-label {
+        margin-top: 1rem;
+    }
 }
