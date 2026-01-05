@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Formatador de caracteres em textos grátis">
+    <meta name="keywords" content="Formatação, Texto, Caracteres, Troca, Mudar">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <script src="script.js"></script>
-    <title>Troca-Texto</title>
+    <title>Troca-Strings</title>
 </head>
-
-<body class="body-itens-position">
-    <header class="header-logo">
-        <img src="img/logo_1.png" alt="Logo XY do site" height="120px" width="120px">
+<body>
+    <header class="header-div">
+        <h1 class="site-name">www.troca-strings.com.br</h1>
     </header>
-    <div class="sequence-to-change-area">
-        <label for="to-remove-text" class="label-sequence-to-change">Sequencia que será REMOVIDA:</label>
-        <input type="text" id="to-remove-text" class="input-sequence-to-change" placeholder="Exemplo: '2&#10099;'" spellcheck="false">
-        <label for="to-add-text" class="label-sequence-to-change">Sequencia para ADICIONAR no lugar:</label>
-        <input type="text" id="to-add-text" class="input-sequence-to-change" placeholder="Exemplo: '2-'" spellcheck="false">
+    <div class="substring-input-container">
+        <label for="original-substring" class="substring-label">Sequência que será <b>REMOVIDA</b>:</label>
+        <input type="text" id="original-substring" class="substring-input" placeholder="..." spellcheck="false">
+        <label for="new-substring" class="substring-label">Sequência para <b>ADICIONAR</b> no lugar:</label>
+        <input type="text" id="new-substring" class="substring-input" placeholder="..." spellcheck="false">
     </div>
-    <div class="text-to-change-area">
-        <div class="ttc-divs-area">
-            <div class="text-div">
-                <h2>Texto Original</h2>
-                <textarea id="original-text" class="text-input" role="textbox" contenteditable="true" spellcheck="false" placeholder="Insira aqui o texto que será alterado..."></textarea>
-            </div>
-            <div class="text-div">
-                <h2>Texto Alterado</h2>
-                <textarea id="new-text" class="text-input" role="textbox" contenteditable="false" placeholder="Esperando texto para alterar..."></textarea>
-            </div>
+    <div class="text-input-container">
+        <div class="text-div" style="margin-right: 2rem;">
+            <p class="text-h">Texto <i>Original</i></p>
+            <textarea id="original-text" class="text-input" role="textbox" contenteditable="true" spellcheck="false" placeholder="Insira aqui o texto que será alterado..."></textarea>
+        </div>
+        <div class="text-div" style="margin-left: 2rem;">
+            <h2 class="text-h">Texto <i>Alterado</i></h2>
+            <textarea id="new-text" class="text-input" role="textbox" contenteditable="false" placeholder="Esperando texto para alterar..."></textarea>
         </div>
     </div>
     <footer class="footer-ads">Área de Anúncios do Google</footer>
