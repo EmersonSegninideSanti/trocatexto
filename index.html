@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
-    <script src="script.js"></script>
     <title>Troca-Strings</title>
 </head>
 <body>
@@ -17,20 +16,22 @@
     </header>
     <div class="substring-input-container">
         <label for="original-substring" class="substring-label">Sequência que será <b>REMOVIDA</b>:</label>
-        <input type="text" id="original-substring" class="substring-input" placeholder="..." spellcheck="false">
+        <input type="text" id="original-substring" class="substring-input" value="Exemplo_1" spellcheck="false">
         <label for="new-substring" class="substring-label">Sequência para <b>ADICIONAR</b> no lugar:</label>
-        <input type="text" id="new-substring" class="substring-input" placeholder="..." spellcheck="false">
+        <input type="text" id="new-substring" class="substring-input" value="Exemplo_2" spellcheck="false">
     </div>
     <div class="text-input-container">
         <div class="text-div" style="margin-right: 2rem;">
-            <p class="text-h">Texto <i>Original</i></p>
-            <textarea id="original-text" class="text-input" role="textbox" contenteditable="true" spellcheck="false" placeholder="Insira aqui o texto que será alterado..."></textarea>
+            <p class="text-h"><i>Texto Original</i></p>
+            <textarea id="original-text" class="text-input" role="textbox" spellcheck="false" placeholder="Insira aqui o texto que será alterado Exemplo_1."></textarea>
+            <button style="background-color: blue;" onclick="trocaStrings()">Alterar Texto</button>
         </div>
         <div class="text-div" style="margin-left: 2rem;">
-            <h2 class="text-h">Texto <i>Alterado</i></h2>
-            <textarea id="new-text" class="text-input" role="textbox" contenteditable="false" placeholder="Esperando texto para alterar..."></textarea>
+            <h2 class="text-h"><i>Texto Alterado</i></h2>
+            <textarea id="new-text" class="text-input" role="textbox" placeholder="Esperando texto para alterar..."></textarea>
         </div>
     </div>
     <footer class="footer-ads">Área de Anúncios do Google</footer>
+    <script src="script2.js"></script>
 </body>
 </html>
