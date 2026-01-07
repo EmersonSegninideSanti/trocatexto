@@ -48,7 +48,7 @@ i, em {
     justify-content: center;
     align-items: center;
     height: 20vh;
-    margin-top: 0.25rem;
+    margin-top: 2rem;
     margin-bottom: 1.5rem;
 }
 .substring-label {
@@ -78,6 +78,7 @@ i, em {
 .text-input-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    position: relative;
     justify-content: center;
     column-gap: 5%;
     height: auto;
@@ -89,6 +90,7 @@ i, em {
 .text-div {
     display: flex;
     flex-direction: column;
+    position: relative;
     height: auto;
     width: auto;
     padding: 0;
@@ -109,6 +111,22 @@ i, em {
     resize: none;
     word-break: break-word;
 }
+/* 
+.text-input::-webkit-scrollbar {
+    width: 1rem;
+}
+.text-input::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+.text-input::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 1rem;
+}
+.text-input::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+  
+} */
+
 .text-input::placeholder {
     color: rgb(82, 82, 82);
     font-style: italic;
@@ -120,6 +138,77 @@ i, em {
     padding-bottom: 0.25rem;
     text-align: center;
     font-size: 2rem;
+}
+.new-text-button {
+    /* display: none; */
+    position: absolute;
+    background: 
+        linear-gradient(135deg, #610261, #460261, #0c8dc0) padding-box,
+        linear-gradient(to right, #00e1ff, #6dd4c7, #71d189) border-box;;
+    padding: 0.75rem;
+    border: 1.5px solid transparent;
+    border-radius: 2.5rem;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    top: 4rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: padding 0.4s;
+    z-index: 2;
+}
+.new-text-button:hover {
+    padding: 0.9rem;
+    border-radius: 2.7rem;
+    background: 
+        linear-gradient(135deg, #8d038d, #6c0396, #0b688d) padding-box,
+        linear-gradient(to right, #00e1ff, #6dd4c7, #71d189) border-box;;
+}
+.new-text-button:active {
+    background: 
+        linear-gradient(135deg, #270327, #4e4950, #554244) padding-box,
+        linear-gradient(135deg, #ffee00, #c9bd51, #f15d5d) border-box;;
+    border: 2.5px solid transparent;
+}
+
+.copy-button {
+    position: absolute;
+    background: 
+        linear-gradient(210deg, #30bb47, #1c8a69, #053988) padding-box,
+        linear-gradient(135deg, #592386, #2188e9, #0f8abb) border-box;
+    padding: 0.25rem 0.75rem;
+    border: 2px solid transparent;
+    border-radius: 2rem;
+    color: white;
+    font-size: 1.25rem;
+    text-align: center;
+    top: 1rem;
+    right: -3.5rem;
+}
+.copy-button:hover {
+    background:
+        linear-gradient(210deg, #3dec5a, #29c797, #0855c9) padding-box,
+        linear-gradient(135deg, #592386, #2188e9, #0f8abb) border-box;
+}
+.copy-button:active {
+    background:
+        linear-gradient(210deg, #b9bb30, #1c8a3d, #490588) padding-box,
+        linear-gradient(135deg, #592386, #2188e9, #0f8abb) border-box;
+}
+
+.copy-message-confirmation {
+    position: fixed;
+    background-color: #ebebeb;
+    padding: 0.25rem 1rem;
+    border: 2px solid #592386;
+    border-radius: 2rem;
+    box-shadow: 0.1rem 0.1rem #5f5f5f;
+    font-size: 1.25rem;
+    text-align: center;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
 }
 
 /*------------------------------------------------------------
@@ -167,7 +256,21 @@ i, em {
         min-height: 2rem;
         height: 80%;
     }
+    .new-text-button {
+        top: 3rem;
+        left: 95%;
+    }
+    .copy-button {
+        right: 92%;
+        top: 0.5rem;
+    }
+    .copy-message-confirmation {
+        top: 15%;
+    }
 }
+
+
+
 @media screen and (min-width: 801px) and (max-width: 1020px) {
     .site-name {
         font-size: 2rem;
