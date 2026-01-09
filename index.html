@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Formatador de caracteres em textos grátis">
+    <meta name="description" content="Formatador online grátis de caracteres em textos">
     <meta name="keywords" content="Formatação, Texto, Caracteres, Troca, Mudar">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
@@ -14,26 +14,31 @@
     <header class="header-div">
         <h1 class="site-name">www.troca-strings.com.br</h1>
     </header>
-    <div class="substring-input-container">
-        <label for="original-substring" class="substring-label">Sequência que será <b>REMOVIDA</b>:</label>
-        <input type="text" id="original-substring" class="substring-input" value="Exemplo_1" spellcheck="false">
-        <label for="new-substring" class="substring-label">Sequência para <b>ADICIONAR</b> no lugar:</label>
-        <input type="text" id="new-substring" class="substring-input" value="Exemplo_2" spellcheck="false">
-    </div>
-    <div class="text-input-container">
-        <div class="text-div" style="margin-right: 2rem;">
-            <p class="text-h">Texto <i>Original</i></p>
-            <textarea id="original-text" class="text-input" role="textbox" contenteditable="true" spellcheck="false" placeholder="Insira aqui o texto que será alterado..."></textarea>
+    <main class="main-container">
+        <div class="substring-input-container">
+            <label for="original-substring" class="substring-label">Sequência a <b>LOCALIZAR</b> e <b>REMOVER</b>:</label>
+            <input type="text" id="original-substring" class="substring-input" placeholder="Exemplo_1" spellcheck="false">
+            <label for="new-substring" class="substring-label">Sequência a <b>ADICIONAR</b>:</label>
+            <input type="text" id="new-substring" class="substring-input" placeholder="Exemplo_2" spellcheck="false">
         </div>
-        <button class="new-text-button" onclick="trocaStrings()">Alterar<br>Texto</button>
-        <div class="text-div" style="margin-left: 2rem;">
-            <h2 class="text-h">Texto <i>Alterado</i></h2>
-            <textarea id="new-text" class="text-input" role="textbox" contenteditable="false" placeholder="Esperando texto para alterar..."></textarea>
-            <button class="copy-button" onclick="">Copiar<br>Texto</button>
+        <div class="text-input-container">
+            <div class="text-div">
+                <div class="text-header">Texto Original</div>
+                <textarea id="original-text" class="text-input" role="textbox" spellcheck="false" placeholder="Insira aqui o texto que será alterado..."></textarea>
+            </div>
+            <button class="new-text-button" onclick="trocaStrings()">
+                <img src="img/new_text_icon.png">
+            </button>
+            <div class="text-div">
+                <div class="text-header">Texto Alterado</div>
+                <textarea id="new-text-input" class="text-input" role="textbox" readonly placeholder="Esperando texto para alterar..."></textarea>
+                <button class="copy-button" onclick="">
+                    <img src="img/copy-icon.png">
+                </button>
+            </div>
         </div>
-    </div>
+    </main>
     <footer class="footer-ads">Área de Anúncios do Google</footer>
-    <div class="copy-message-confirmation">Texto copiado para <br>Área de Transferência</div>
     <script src="script2.js"></script>
 </body>
 </html>

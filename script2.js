@@ -3,5 +3,5 @@ function trocaStrings () {
     const toRmv = document.getElementById('original-substring').value;
     const toInsrt = document.getElementById('new-substring').value;
     const newText = originalText.split(toRmv).join(toInsrt);
-    document.getElementById('new-text').value = newText;
+    document.getElementById('new-text-input').value = newText;
 }
