@@ -5,3 +5,15 @@ function trocaStrings () {
     const newText = originalText.split(toRmv).join(toInsrt);
     document.getElementById('new-text-input').value = newText;
 }
+function copy () {
+    const text = document.getElementById("new-text-input").value;
+    navigator.clipboard.writeText(text);
+
+    const copy_message = document.querySelector('.clipboard-toast');
+    copy_message.style.animationName = "move";
+    copy_message.style.display = "block";
+    setTimeout(() => {
+        copy_message.style.animationName = "none";
+        copy_message.style.display = "none";
+    }, 3000)
+}

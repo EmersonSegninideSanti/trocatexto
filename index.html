@@ -11,34 +11,38 @@
     <title>Troca-Strings</title>
 </head>
 <body>
-    <header class="header-div">
-        <h1 class="site-name">www.troca-strings.com.br</h1>
-    </header>
+
     <main class="main-container">
+        <header class="header-div">
+            <h1 class="site-name">www.troca-strings.com.br</h1>
+        </header>
         <div class="substring-input-container">
             <label for="original-substring" class="substring-label">Sequência a <b>LOCALIZAR</b> e <b>REMOVER</b>:</label>
             <input type="text" id="original-substring" class="substring-input" placeholder="Exemplo_1" spellcheck="false">
             <label for="new-substring" class="substring-label">Sequência a <b>ADICIONAR</b>:</label>
             <input type="text" id="new-substring" class="substring-input" placeholder="Exemplo_2" spellcheck="false">
-        </div>
+       </div>
         <div class="text-input-container">
             <div class="text-div">
                 <div class="text-header">Texto Original</div>
                 <textarea id="original-text" class="text-input" role="textbox" spellcheck="false" placeholder="Insira aqui o texto que será alterado..."></textarea>
             </div>
-            <button class="new-text-button" onclick="trocaStrings()">
+            <button class="new-text-button" onclick="trocaStrings()" aria-describedby="change-tooltip">
                 <img src="img/new_text_icon.png">
+                <span class="tooltip" role="tooltip" id="change-tooltip">Aplicar alteração</span>
             </button>
             <div class="text-div">
                 <div class="text-header">Texto Alterado</div>
                 <textarea id="new-text-input" class="text-input" role="textbox" readonly placeholder="Esperando texto para alterar..."></textarea>
-                <button class="copy-button" onclick="">
+                <button class="copy-button" onclick="copy()" aria-describedby="copy-tooltip">
                     <img src="img/copy-icon.png">
+                    <span class="tooltip" role="tooltip" id="copy-tooltip">Copiar para Área de Transferência</span>
                 </button>
             </div>
         </div>
     </main>
     <footer class="footer-ads"></footer>
+    <div class="clipboard-toast">Texto copiado para <br>Área de Transferência</div>
     <script src="script.js"></script>
 </body>
 </html>
