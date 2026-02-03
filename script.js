@@ -17,3 +17,11 @@ function copy () {
         copy_message.style.display = "none";
     }, 3000)
 }
+function showBalao () {
+    document.querySelector('.balao').style.display = "flex";
+    document.querySelector('.help-button').style.display = "none";
+}
+function hideBalao () {
+    document.querySelector('.balao').style.display = "none";
+    document.querySelector('.help-button').style.display = "flex";
+}

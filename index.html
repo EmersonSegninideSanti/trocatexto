@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Formatador online grátis de caracteres em textos">
-    <meta name="keywords" content="Formatação, Texto, Caracteres, Troca, Mudar">
+    <meta name="description" content="Troca-Strings é um website/ferramenta para substituir ocorrências de uma sequência de caracteres em um texto por outra sequência de caracteres.">
+    <meta name="keywords" content="texto, caracteres, strings, palavras, trocar, troca, localizar, substituir, mudar, código">
+    <meta property="og:title" content="Ferramenta de trocar sequências de caracteres - Troca-Strings">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Troque ocorrências de uma sequência de caracteres em um texto por ocorrências de outra sequência!">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
@@ -16,10 +19,17 @@
             <h1 class="site-name">www.troca-strings.com.br</h1>
         </header>
         <div class="substring-input-container">
+            <button class="help-button" onclick="showBalao()">?</button>
+            <div class="balao centralize-my-content"> 
+                <h3>O que são <i>strings</i>?</h3>
+                <p>Strings são sequências de caracteres. Em programas essas sequências podem ser manipuladas de muitas maneiras e usadas para diversos fins.</p>
+                <p>Este site localiza e substitui uma <i>string</i> por outra em um texto (que é uma grande <i>string</i>.).</p>
+                <button class="close-balao" onclick="hideBalao()">x</button>
+            </div>
             <label for="original-substring" class="substring-label">Sequência a <b>LOCALIZAR</b> e <b>REMOVER</b>:</label>
-            <input type="text" id="original-substring" class="substring-input" placeholder="Exemplo_1" spellcheck="false">
+            <input type="text" id="original-substring" class="substring-input" spellcheck="false">
             <label for="new-substring" class="substring-label">Sequência a <b>ADICIONAR</b>:</label>
-            <input type="text" id="new-substring" class="substring-input" placeholder="Exemplo_2" spellcheck="false">
+            <input type="text" id="new-substring" class="substring-input" spellcheck="false">
        </div>
         <div class="text-input-container">
             <div class="text-div">
@@ -40,7 +50,9 @@
             </div>
         </div>
     </main>
-    <footer class="footer-ads"></footer>
+    <footer class="footer centralize-my-content">
+        <p>Desenvolvido por Emerson Segnini de Santi e Peterson Segnini de Santi</p>
+    </footer>
     <div class="clipboard-toast">Texto copiado para <br>Área de Transferência</div>
     <script src="script.js"></script>
 </body>

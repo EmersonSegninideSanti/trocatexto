@@ -18,7 +18,10 @@ i, em {
     justify-content: center;
     align-items: center;
 }
-
+h3 {
+    font-size: 1rem;
+    font-weight: bold;
+}
 
 /*-
     Header
@@ -28,11 +31,63 @@ i, em {
     align-items: center;
     height: 7vh;
     border-bottom: 2px solid white;
+    position: relative;
 }
 .site-name {
     color: white;
     font-size: 1.75rem;
     padding-left: 1rem;
+}
+.balao, .help-button {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+.help-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #686868;
+    height: 3.5rem;
+    width: 3.5rem;
+    border: 3px solid #e9e9e9;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 2.5rem;
+    left: 1rem;
+}
+.help-button:hover {
+    background: 
+        linear-gradient(135deg, #050a2e, #0b1565, #12208d)
+    ;
+}
+.balao {
+    display: none;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: .7rem;
+    color: black;
+    max-width: 20vw;
+    align-items: start;
+    flex-direction: column;
+    padding: 1rem;
+    left: .5rem;
+}
+
+.balao p {
+    text-indent: .3rem;
+}
+.close-balao {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: black;
+    font-size: 2rem;
+    right: .6rem;
+}
+.close-balao:hover {
+    cursor: pointer;
 }
 
 
@@ -86,6 +141,7 @@ i, em {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     height: 20vh;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
@@ -259,8 +315,10 @@ i, em {
 /*-
     Footer
 ------------------------------------------------------------*/
-.footer-ads {
+.footer {
     background-color: #9da6be;
+    text-align: center;
+    padding: 0rem 3rem;
     color: black;
     height: 10vh;
     position: fixed;
@@ -277,10 +335,19 @@ i, em {
     .main-container {
         display: flex;
         flex-direction: column;
+        margin-bottom: 14rem;
     }
     .site-name {
         font-size: 1.5rem;
         white-space: nowrap; /* Para não quebrar o logo*/
+    }
+    .help-button {
+        top: 50%;
+        transform: translate(0%, -20%);
+        left: 0.5rem;
+    }
+    .balao {
+        max-width: 50%;
     }
     .substring-input-container {
         margin-top: 1.75rem;
@@ -303,6 +370,8 @@ i, em {
     .new-text-button {
         margin-top: 0;
         align-self: center;
+    }
+    .new-text-button img {
         transform: rotate(90deg);
     }
     .new-text-button:active {
@@ -313,6 +382,7 @@ i, em {
     .copy-button {
         right: 0.5rem;
     }
+
 }
 @media screen and (min-width: 801px) and (max-width: 1020px) {
     .substring-input {
@@ -328,7 +398,7 @@ i, em {
     .site-name {
         font-size: 2rem;
     }
-    .footer-ads, .text-div, .substring-label, .substring-input {
+    .footer, .text-div, .substring-label, .substring-input {
         font-size: 1.25rem;
     }
     .substring-label {
